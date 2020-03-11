@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test HTML File</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="deal-item">
+
+    <div class="item-container">
+        <p>Dòng 1</p>
+        <input id="get-text01" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond01" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date01" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+
+    <div class="item-container">
+        <p>Dòng 2</p>
+        <input id="get-text02" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond02" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date02" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+    <div class="item-container">
+        <p>Dòng 3</p>
+        <input id="get-text03" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond03" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date03" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+    <div class="item-container">
+        <p>Dòng 4</p>
+        <input id="get-text04" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond04" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date04" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+    <div class="item-container">
+        <p>Dòng 5</p>
+        <input id="get-text05" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond05" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date05" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+    <div class="item-container">
+        <p>Dòng 6</p>
+        <input id="get-text06" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond06" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date06" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+    <div class="item-container">
+        <p>Dòng 7</p>
+        <input id="get-text07" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond07" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date07" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+    <div class="item-container">
+        <p>Dòng 8</p>
+        <input id="get-text08" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond08" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date08" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+    <div class="item-container">
+        <p>Dòng 9</p>
+        <input id="get-text09" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond09" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date09" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+    <div class="item-container">
+        <p>Dòng 10</p>
+        <input id="get-text10" class="text-input" placeholder="Chỗ này điền mã">
+        <input style="width: 700px;" id="get-cond10" class="text-input" placeholder="Chỗ này điền điều kiện">
+        <input id="get-date10" class="text-input" placeholder="Chỗ này điền ngày">
+    </div>
+
+</div>
+<button type="button" class="submit-button" onclick="getContent()">Submit</button>
+
+<table id="visible"></table>
+
+<div class="result-holder">
+    <button type="button" class="copy-result" onclick="copyandpaste();openMobile();" style="display:inline; margin-top: 25px;">Copy code</button>
+
+</div>
+<textarea style="white-space: break-spaces;" id="result" rows="30" cols="80">
+</textarea>
+
+<script>
+    function getContent() {
+        var vartext01 = document.getElementById("get-text01").value;
+        var varcond01 = document.getElementById("get-cond01").value;
+        var vardate01 = document.getElementById("get-date01").value;
+        var vartext02 = document.getElementById("get-text02").value;
+        var varcond02 = document.getElementById("get-cond02").value;
+        var vardate02 = document.getElementById("get-date02").value;
+        var vartext03 = document.getElementById("get-text03").value;
+        var varcond03 = document.getElementById("get-cond03").value;
+        var vardate03 = document.getElementById("get-date03").value;
+        var vartext04 = document.getElementById("get-text04").value;
+        var varcond04 = document.getElementById("get-cond04").value;
+        var vardate04 = document.getElementById("get-date04").value;
+        var vartext05 = document.getElementById("get-text05").value;
+        var varcond05 = document.getElementById("get-cond05").value;
+        var vardate05 = document.getElementById("get-date05").value;
+        var vartext06 = document.getElementById("get-text06").value;
+        var varcond06 = document.getElementById("get-cond06").value;
+        var vardate06 = document.getElementById("get-date06").value;
+        var vartext07 = document.getElementById("get-text07").value;
+        var varcond07 = document.getElementById("get-cond07").value;
+        var vardate07 = document.getElementById("get-date07").value;
+        var vartext08 = document.getElementById("get-text08").value;
+        var varcond08 = document.getElementById("get-cond08").value;
+        var vardate08 = document.getElementById("get-date08").value;
+        var vartext09 = document.getElementById("get-text09").value;
+        var varcond09 = document.getElementById("get-cond09").value;
+        var vardate09 = document.getElementById("get-date09").value;
+        var vartext10 = document.getElementById("get-text10").value;
+        var varcond10 = document.getElementById("get-cond10").value;
+        var vardate10 = document.getElementById("get-date10").value;
+
+
+
+        document.getElementById("result").innerHTML = "<table style='font-size: 14px;'><tbody><tr style=\"background: lightgray;\"><th width=\"40%\" style=\"text-align: center;\">Mã giảm (Click để copy)</th><th width=\"60%\" style=\"text-align: center;\">Ưu đãi</th></tr><tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext01 + "\" /></td><td style=\"text-align: center;\">" + varcond01 + "<br><strong>HSD:&nbsp;</strong>" + vardate01 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext02 + "\" /></td><td style=\"text-align: center;\">" + varcond02 + "<br><strong>HSD:&nbsp;</strong>" + vardate02 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext03 + "\" /></td><td style=\"text-align: center;\">" + varcond03 + "<br><strong>HSD:&nbsp;</strong>" + vardate03 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext04 + "\" /></td><td style=\"text-align: center;\">" + varcond04 + "<br><strong>HSD:&nbsp;</strong>" + vardate04 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext05 + "\" /></td><td style=\"text-align: center;\">" + varcond05 + "<br><strong>HSD:&nbsp;</strong>" + vardate05 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext06 + "\" /></td><td style=\"text-align: center;\">" + varcond06 + "<br><strong>HSD:&nbsp;</strong>" + vardate06 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext07 + "\" /></td><td style=\"text-align: center;\">" + varcond07 + "<br><strong>HSD:&nbsp;</strong>" + vardate07 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext08 + "\" /></td><td style=\"text-align: center;\">" + varcond08 + "<br><strong>HSD:&nbsp;</strong>" + vardate08 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext09 + "\" /></td><td style=\"text-align: center;\">" + varcond09 + "<br><strong>HSD:&nbsp;</strong>" + vardate09 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext10 + "\" /></td><td style=\"text-align: center;\">" + varcond10 + "<br><strong>HSD:&nbsp;</strong>" + vardate10 + "</td></tr>" +
+        "</tbody></table>"
+        ;
+
+        document.getElementById("visible").innerHTML = "<table style='font-size: 14px;'><tbody><tr style=\"background: lightgray;\"><th width=\"40%\" style=\"text-align: center;\">Mã giảm (Click để copy)</th><th width=\"60%\" style=\"text-align: center;\">Ưu đãi</th></tr><tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext01 + "\" /></td><td style=\"text-align: center;\">" + varcond01 + "<br><strong>HSD:&nbsp;</strong>" + vardate01 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext02 + "\" /></td><td style=\"text-align: center;\">" + varcond02 + "<br><strong>HSD:&nbsp;</strong>" + vardate02 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext03 + "\" /></td><td style=\"text-align: center;\">" + varcond03 + "<br><strong>HSD:&nbsp;</strong>" + vardate03 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext04 + "\" /></td><td style=\"text-align: center;\">" + varcond04 + "<br><strong>HSD:&nbsp;</strong>" + vardate04 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext05 + "\" /></td><td style=\"text-align: center;\">" + varcond05 + "<br><strong>HSD:&nbsp;</strong>" + vardate05 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext06 + "\" /></td><td style=\"text-align: center;\">" + varcond06 + "<br><strong>HSD:&nbsp;</strong>" + vardate06 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext07 + "\" /></td><td style=\"text-align: center;\">" + varcond07 + "<br><strong>HSD:&nbsp;</strong>" + vardate07 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext08 + "\" /></td><td style=\"text-align: center;\">" + varcond08 + "<br><strong>HSD:&nbsp;</strong>" + vardate08 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext09 + "\" /></td><td style=\"text-align: center;\">" + varcond09 + "<br><strong>HSD:&nbsp;</strong>" + vardate09 + "</td></tr>" +
+            "<tr><td><input class=\"coupon-code-modal header-alike\" style=\"border: none; background: white; font-weight: normal; font-size: 12px; margin: 0px; padding: 2.5px; margin-left: auto; margin-right: auto; width: 115px; height: 40px;\" readonly=\"readonly\" type=\"text\" value=\"" + vartext10 + "\" /></td><td style=\"text-align: center;\">" + varcond10 + "<br><strong>HSD:&nbsp;</strong>" + vardate10 + "</td></tr>" +
+            "</tbody></table>"
+
+    }
+
+
+    function copyandpaste() {
+        document.getElementById("result").focus();
+        document.getElementById("result").select();
+        document.execCommand("copy");
+    }
+</script>
+</body>
+</html>
